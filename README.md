@@ -17,6 +17,7 @@
 - [Contar quantidade de registros](#contar-quantidade-de-registros)
 - [Remover documento](#remover-documento)
 - [Atualizar documento](#atualizar-documento)
+- [References](#references)
 
 ---
 
@@ -110,3 +111,6 @@ db.nome_collection.updateOne(
   { $set: { "price": 99 } }
 )
 ```
+
+# References
+https://www.mongodb.com/pt-br/docs/manual/crud/
