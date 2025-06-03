@@ -24,3 +24,89 @@
 
 ```javascript
 show dbs
+```
+
+## Selecionar banco de dados
+
+```javascript
+use banco_exemplo
+```
+
+## Mostrar collections (tabelas)
+
+```javascript
+show collections
+```
+
+## Criar uma collection
+
+```javascript
+db.createCollection("nome_da_collection")
+```
+
+## Inserir um documento
+
+```javascript
+db.nome_collection.insertOne({
+  "nome": "Fulano",
+  "Senha": 123
+})
+```
+
+## Inserir múltiplos documentos
+
+```javascript
+db.itens.insertMany([
+  {
+    "name": "João",
+    "price": 32
+  },
+  {
+    "name": "Mateus",
+    "price": 14
+  },
+  {
+    "name": "Tiago",
+    "price": 90
+  }
+])
+```
+
+## Visualizar todos os documentos de uma collection
+
+```javascript
+db.nome_collection.find()
+```
+
+## Limitar visualização de documentos
+
+```javascript
+db.nome_collection.find().limit(1)
+```
+
+## Buscar documento específico
+
+```javascript
+db.nome_collection.find({ "name": "João" })
+```
+
+## Contar quantidade de registros
+
+```javascript
+db.nome_collection.countDocuments()
+```
+
+## Remover documento
+
+```javascript
+db.nome_collection.deleteOne({ "name": "Tiago" })
+```
+
+## Atualizar documento
+
+```javascript
+db.nome_collection.updateOne(
+  { "name": "João" },
+  { $set: { "price": 99 } }
+)
+```
