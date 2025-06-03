@@ -1,59 +1,26 @@
 # MongoDB
- Guia dos Princiapais Comandos do Banco de dados não Relacional MongoDB
+**Guia dos Principais Comandos do Banco de Dados Não Relacional MongoDB**
 
-# Comandos MongoDB
+---
 
-# Mostrar todos os bancos de dados
+## Índice
+
+- [Mostrar todos os bancos de dados](#mostrar-todos-os-bancos-de-dados)
+- [Selecionar banco de dados](#selecionar-banco-de-dados)
+- [Mostrar collections (tabelas)](#mostrar-collections-tabelas)
+- [Criar uma collection](#criar-uma-collection)
+- [Inserir um documento](#inserir-um-documento)
+- [Inserir múltiplos documentos](#inserir-múltiplos-documentos)
+- [Visualizar todos os documentos de uma collection](#visualizar-todos-os-documentos-de-uma-collection)
+- [Limitar visualização de documentos](#limitar-visualização-de-documentos)
+- [Buscar documento específico](#buscar-documento-específico)
+- [Contar quantidade de registros](#contar-quantidade-de-registros)
+- [Remover documento](#remover-documento)
+- [Atualizar documento](#atualizar-documento)
+
+---
+
+## Mostrar todos os bancos de dados
+
+```javascript
 show dbs
-
-# Seleciona aquele banco de dados
-use banco_exemplo
-
-# Mostra as collections (tabelas)
-show collections
-
-# Cria uma collection
-db.createCollection("nome_da_collection")
-
-# Para Inserir um documento
-db.nome_collection.insert ({
-    "nome": "Fulano",
-    "Senha": 123
-})
-
-# Para Inserir vários itens
-db.itens.insertMany([
-    {
-        "name": "João",
-        "price": 32
-    },
-    {
-        "name": "Mateus",
-        "price": 14
-    },
-    {
-        "name": "Tiago",
-        "price": 90
-    }
-])
-
-# Para Visualizar uma collection
-db.nome_collection.find()
-
-# Para visualizar apenas alguns itens
-db.nome_collection.find().limit(1)
-
-# Localizando um item específico
-db.nome_collection.find({ "name": "João" })
-
-# Retornar a quantidade de registros
-db.nome_collection.find().count()
-
-# Remover um registro
-db.nome_collection.remove({ "name": "Tiago" })
-
-# Atualizar um registro
-db.nome_collection.update(
-    { "name": "João" },
-    { "$set": { "price": 99 } }
-)
