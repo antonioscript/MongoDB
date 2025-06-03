@@ -1,7 +1,6 @@
 # MongoDB
 **Guia dos Principais Comandos do Banco de Dados Não Relacional MongoDB**
 
----
 
 ## Índice
 
